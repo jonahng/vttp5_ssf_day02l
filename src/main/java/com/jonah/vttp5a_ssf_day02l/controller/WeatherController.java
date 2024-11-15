@@ -1,12 +1,17 @@
 package com.jonah.vttp5a_ssf_day02l.controller;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -61,6 +66,20 @@ public class WeatherController {
     @GetMapping("/forma")
     public String showForm(){
         return "forma";
+    }
+
+
+    @PostMapping("/forma")
+    public String handleFormA(@RequestBody MultiValueMap<String, String> form){
+        Map<String, String> formData = new HashMap<>(); 
+        for(String str: form.keySet()){
+            formData.put(str, form.getFirst(str)); //THis lets us retrieve the data that was posted by the form;
+            System.out.println("form data:" + str + ": " + form.getFirst(str));
+        }
+
+        return "forma";
+
+
     }
 
 }

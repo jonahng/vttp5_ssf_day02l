@@ -13,7 +13,14 @@
     <main>
         <h1>FormA</h1>  
         <p>Text</p>
-        <form method="post" data-th-action=
+        <form method="post" data-th-action="@{/weather/forma}">
+          <label>City/country</label>
+          <input type ="text" name = "city" placeholder = "Enter City Name">
+          <br/>
+          <label>Temperature</label>
+          <input type="text" name = "Temperature" placeholder="Enter Temperature">
+          <button type = "submit">SUBMIT</button> <!-- SUBMIT BUTTON MUST BE IN THE FORM. Since this is a post, we need a post mapping -->
+        </form>
 
 
         
