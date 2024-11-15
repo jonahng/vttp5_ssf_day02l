@@ -15,5 +15,15 @@ Data,
 create a form
 buttons to update
 Iteration to check count and size etc
+Form posting and getting info from form
 
+
+
+
+
+
+
+HTML samples
+${} THis is placeholder value in html
+@{} hyperlink, 
 
