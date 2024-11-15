@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Website</title>
+    
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <!-- YOU CAN USE BOOTSTAP BY COPYING THE LINK BELOW FROM THE BOOTSTRAP Page -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- <img width="40%" height="20%" src="https://picsum.photos/200"> -->
+    <main>
+        <h1>CART</h1>  
+        <p>STUFF IN Text</p>
+
+        <table class="table table-dark table-striped-columns">
+            <thead>
+                <tr>
+                    <th>Country code</th> <!--This is to make headers for the table-->
+                    <th>country name</th>
+                    <th>number of inhabitants</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-th-each="country, state : ${countries}"> <!-- state.index,state.count,state.size, the word state can be status etc etc -->
+                    <td data-th-text = "${country.code}"></td>
+                    
+                    <td data-th-text = "${country.name}"></td>
+                    <td data-th-text = "${country.population}"></td>
+
+                </tr>
+            </tbody>
+
+
+        </table>
+
+
+        
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
