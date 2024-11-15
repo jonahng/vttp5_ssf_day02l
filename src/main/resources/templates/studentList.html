@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My Website</title>
-    <link rel="stylesheet" href="./style.css">
+    
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <!-- YOU CAN USE BOOTSTAP BY COPYING THE LINK BELOW FROM THE BOOTSTRAP Page -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
     <img width="40%" height="20%" src="https://picsum.photos/200">
@@ -17,7 +19,7 @@
         <table class="table table-dark table-striped-columns">
             <thead>
                 <tr>
-                    <th>id</th>
+                    <th>id</th> <!--This is to make headers for the table-->
                     <th>first name</th>
                     <th>last name</th>
                     <th>date of birth</th>
@@ -26,13 +28,15 @@
                 </tr>
             </thead>
             <tbody>
-                <tr data-th-each="student, status : ${students}">
+                <tr data-th-each="student, state : ${students}"> <!-- state.index,state.count,state.size, the word state can be status etc etc -->
                     <td data-th-text = "${student.id}"></td>
+                    
                     <td data-th-text = "${student.firstName}"></td>
                     <td data-th-text = "${student.lastName}"></td>
 
                     <td data-th-text = "${student.email}"></td>
                     <td data-th-text = "${student.address}"></td>
+                    <td data-th-text = "${state.count}"></td>
 
                 </tr>
             </tbody>
