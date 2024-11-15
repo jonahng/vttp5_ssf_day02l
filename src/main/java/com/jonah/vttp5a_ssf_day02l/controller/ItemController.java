@@ -36,7 +36,7 @@ public class ItemController {
         //url is http://localhost:8080/items/filter?itemQuantity=3
         List<Item> filterItems = items.stream().filter(a -> a.getQuantity() > Integer.parseInt(quantity)).collect(Collectors.toList());
 
-        model.addAttribute("items",filterItems);
+        model.addAttribute("items",filterItems); //the attributeName is the key, the filterItems is the value. The html looks at the key.
         return "cartlist";
 
     }

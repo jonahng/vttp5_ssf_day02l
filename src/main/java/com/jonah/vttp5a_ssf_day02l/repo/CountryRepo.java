@@ -19,6 +19,12 @@ public class CountryRepo {
         countryList.add(cty);
         cty = new Country("USA", "AMERICA", 200000);
         countryList.add(cty);
+        cty = new Country("FN", "Finland", 50);
+        countryList.add(cty);
+        cty = new Country("AUS", "Australia", 15000);
+        countryList.add(cty);
+        cty = new Country("ICE", "Iceland", 700000);
+        countryList.add(cty);
 
         return countryList;
 
